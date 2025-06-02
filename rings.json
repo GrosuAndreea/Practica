@@ -1,0 +1,92 @@
+[
+  {
+    "url": "images/best1.png",
+    "name": "Celestial Halo",
+    "price": 1250
+  },
+  {
+    "url": "images/best3.png",
+    "name": "Moonlight Spark",
+    "price": 870
+  },
+  {
+    "url": "images/r2.png",
+    "name": "Golden Petals",
+    "price": 1390
+  },
+  {
+    "url": "images/r2.png",
+    "name": "Vintage Glimmer",
+    "price": 920
+  },
+  {
+    "url": "images/ring5.png",
+    "name": "Diamond Nest",
+    "price": 1100
+  },
+  {
+    "url": "images/ring6.png",
+    "name": "Mystic Twist",
+    "price": 1030
+  },
+  {
+    "url": "images/ring7.png",
+    "name": "Ivory Blossom",
+    "price": 980
+  },
+  {
+    "url": "images/ring8.png",
+    "name": "Royal Aurora",
+    "price": 1500
+  },
+  {
+    "url": "images/ring9.png",
+    "name": "Ocean Dream",
+    "price": 760
+  },
+  {
+    "url": "images/ring10.png",
+    "name": "Crystal Charm",
+    "price": 1140
+  },
+  {
+    "url": "images/ring11.png",
+    "name": "Pearl Orbit",
+    "price": 890
+  },
+  {
+    "url": "images/ring12.png",
+    "name": "Silken Grace",
+    "price": 1195
+  },
+  {
+    "url": "images/ring13.png",
+    "name": "Luna Whisper",
+    "price": 880
+  },
+  {
+    "url": "images/ring14.png",
+    "name": "Rose Flame",
+    "price": 1330
+  },
+  {
+    "url": "images/ring15.png",
+    "name": "Starlight Crown",
+    "price": 1470
+  },
+  {
+    "url": "images/ring16.png",
+    "name": "Opal Mirage",
+    "price": 970
+  },
+  {
+    "url": "images/ring17.png",
+    "name": "Twilight Bliss",
+    "price": 1050
+  },
+  {
+    "url": "images/ring18.png",
+    "name": "Snowdrop Shine",
+    "price": 990
+  }
+]

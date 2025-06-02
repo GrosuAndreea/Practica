@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="contactus.css">
+
+      <script type="module">
+    import header from "../header.js";
+    document.getElementById("header-container").innerHTML = header();
+
+    document.getElementById("wish-list-btn").addEventListener("click", () =>{
+  window.open("wishlist.html");
+});
+  </script>
+
+
+</head>
+
+<body>
+    <div class="main-container">
+            <span id="header-container"></span>
+
+
+        <section class="s1">
+            <div class="both-1">
+                <div class="s1-left"></div>
+                <div class="s1-right">
+                    <div>
+                        <h4>Need support?</h4>
+                        <p>We're here to assist you at every step of your journey — whether you have a question about a
+                            piece, need guidance on a custom design, or simply wish to speak with one of our experts.
+                            Reach out, and let us help you make your moment unforgettable. Your story begins with a
+                            conversation.</p>
+                    </div>
+                    <button class="blue-btn" onclick="window.location.href='404.html'">discover</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="s2">
+            <div class="s2-back">
+                <div class="s2-all">
+                    <div class="s2-left">
+                        <div class="contact-info">
+                            <div class="fiecare">
+                                <h5>EMAIL</h5>
+                                <p>hello@flutura-jewelry.com</p>
+                            </div>
+
+                            <div class="fiecare">
+                                <h5>PHONE</h5>
+                                <p>+1 (123) 456 7890</p>
+                            </div>
+
+                            <div class="fiecare">
+                                <h5>ADDRESS</h5>
+                                <p>123 Flutura Lane, Sparkle City</p>
+                            </div>
+
+                            <div class="fiecare social-section">
+                                <h5>SOCIAL</h5>
+                                <div class="social-icons">
+                                    <img src="images/face.svg" alt="Facebook">
+                                    <img src="images/ig.svg" alt="Instagram">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="divider-line"></div>
+
+                    <div class="s2-right">
+                        <div class="form-container">
+                            <form action="">
+                                <input type="text" name="name" placeholder="name" required>
+                                <input type="tel" name="phone" placeholder="phone" required>
+                                <input type="email" name="email" placeholder="email" required>
+                                <textarea name="message" placeholder="message" required></textarea>
+                            </form>
+                            <button type="submit" class="blue-btn">submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-back">
+                <div class="div-mare">
+                    <div class="f-left">
+                        <h5>contact us</h5>
+                        <hr>
+                        <p>Email: hello@flutura-jewelry.com<br>
+                            Phone: +1 (123) 456 7890<br>
+                            Address: 123 Flutura, Sparkle City</p>
+                        <div class="social-icons">
+                            <img src="images/face.svg" alt="Facebook">
+                            <img src="images/ig.svg" alt="Instagram">
+                        </div>
+                    </div>
+
+                    <div class="f-center">
+                        <img src="images/grey.png" alt="FLUTURA Logo" class="footer-logo">
+                        <p>© 2025 FLUTURA. All rights reserved.<br>
+                            Designed with grace & glitter.</p>
+                    </div>
+
+                    <div class="f-right">
+                        <h5>navigator</h5>
+                        <hr>
+                        <nav class="small-menu">
+                            <ul>
+                                <li><a href="home.html">home</a></li>
+                                <li><a href="aboutus.html">about us</a></li>
+                                <li><a href="rings.css">rings</a></li>
+                                <li><a href="404.html">bracelets</a></li>
+                                <li><a href="404.html">necklaces</a></li>
+                                <li><a href="contactus.html">contact us</a></li>
+                                <li><a href="engagement.html">bridal</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+                const navMenu = document.querySelector(".nav-menu");
+
+                if (mobileMenuToggle && navMenu) {
+                    mobileMenuToggle.addEventListener("click", function () {
+                        this.classList.toggle("active");
+                        navMenu.classList.toggle("active");
+                    });
+
+                    const navLinks = document.querySelectorAll(".nav-menu a");
+                    navLinks.forEach((link) => {
+                        link.addEventListener("click", () => {
+                            mobileMenuToggle.classList.remove("active");
+                            navMenu.classList.remove("active");
+                        });
+                    });
+
+                    document.addEventListener("click", (event) => {
+                        if (!mobileMenuToggle.contains(event.target) && !navMenu.contains(event.target)) {
+                            mobileMenuToggle.classList.remove("active");
+                            navMenu.classList.remove("active");
+                        }
+                    });
+                }
+            });
+        </script>
+</body>
+
+</html>

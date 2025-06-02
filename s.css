@@ -1,0 +1,303 @@
+ :root {
+            --text-dark: #2E2E2E;
+            --text-light: rgba(46, 46, 46, 0.7);
+            --background-light: #FFFFFF;
+            --background-beige: #F9F6F4;
+            --border-color: rgba(46, 46, 46, 0.2);
+            --button-hover: rgba(216, 221, 226, 0.9);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .left-panel {
+            width: 50%;
+            background-image: url('images/image_signup.png');
+
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content-wrapper {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 40px 60px;
+        }
+
+        .logo-top img,
+        .logo-bottom img {
+            width: 200px;
+        }
+
+        .logo-bottom img {
+            transform: rotate(180deg);
+            display: block;
+            margin-left: auto;
+        }
+
+        .hero-text {
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-text h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 48px;
+            font-weight: 400;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+
+        .hero-text p {
+            font-size: 22px;
+            line-height: 1.4;
+            color: var(--text-light);
+        }
+
+        .right-panel {
+            background-color: #D8DDE2;
+            width: 50%;
+            background-color: var(--background-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-container {
+            width: 80%;
+            max-width: 500px;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 42px;
+            font-weight: 400;
+            color: var(--text-dark);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            font-size: 16px;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            height: 50px;
+            border: 1px solid var(--border-color);
+            border-radius: 30px;
+            padding: 0 20px;
+            font-size: 16px;
+            color: var(--text-dark);
+        }
+
+        input::placeholder {
+            color: rgba(46, 46, 46, 0.3);
+        }
+
+        .btn-create {
+            display: block;
+            width: 200px;
+            height: 50px;
+            margin: 30px auto 0;
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            border-radius: 30px;
+            font-size: 16px;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-create:hover {
+            background-color: var(--button-hover);
+            box-shadow: 0 2px 10px rgba(46, 46, 46, 0.3);
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 40px 0;
+        }
+
+        .divider hr {
+            flex: 1;
+            height: 1px;
+            background-color: var(--border-color);
+            border: none;
+        }
+
+        .divider span {
+            padding: 0 20px;
+            color: var(--text-dark);
+            font-size: 16px;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .btn-social {
+            flex: 1;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            border-radius: 30px;
+            font-size: 16px;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-social:hover {
+            background-color: var(--button-hover);
+            box-shadow: 0 2px 10px rgba(46, 46, 46, 0.3);
+        }
+
+        .btn-social img {
+            width: 20px;
+            height: 20px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                overflow: auto;
+            }
+
+            .container {
+                flex-direction: column;
+                height: auto;
+                min-height: 100vh;
+            }
+
+            .left-panel {
+                display: none;
+            }
+
+            .right-panel {
+                width: 100%;
+                background-image: url('images/image_signup.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                min-height: 100vh;
+                padding: 60px 30px;
+                background-color: transparent;
+            }
+
+            .form-container {
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                min-height: calc(100vh - 120px);
+            }
+
+            h1 {
+                font-size: 36px;
+                margin-bottom: 40px;
+                color: var(--text-dark);
+            }
+
+            .form-group {
+                margin-bottom: 20px;
+            }
+
+            label {
+                font-size: 16px;
+                margin-bottom: 8px;
+                color: var(--text-dark);
+            }
+
+            input {
+                height: 50px;
+                background-color: rgba(255, 255, 255, 0.8);
+                border: 1px solid rgba(46, 46, 46, 0.3);
+                border-radius: 25px;
+            }
+
+            input::placeholder {
+                color: rgba(46, 46, 46, 0.5);
+            }
+
+            .btn-create {
+                width: 180px;
+                height: 45px;
+                font-size: 16px;
+                margin: 30px auto 0;
+                background-color: rgba(255, 255, 255, 0.8);
+                border: 1px solid rgba(46, 46, 46, 0.3);
+                color: var(--text-dark);
+                border-radius: 25px;
+            }
+
+            .divider {
+                margin: 30px 0;
+            }
+
+            .divider hr {
+                background-color: rgba(46, 46, 46, 0.4);
+            }
+
+            .divider span {
+                color: var(--text-dark);
+                background-color: transparent;
+            }
+
+            .social-buttons {
+                gap: 15px;
+            }
+
+            .btn-social {
+                height: 45px;
+                font-size: 14px;
+                background-color: rgba(255, 255, 255, 0.8);
+                border: 1px solid rgba(46, 46, 46, 0.3);
+                color: var(--text-dark);
+                border-radius: 25px;
+            }
+
+            .btn-social img {
+                width: 18px;
+                height: 18px;
+            }
+        }

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="wishlist.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Danfo&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Danfo&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        
+    </style>
+
+    <script type="module">
+        import header from "../header.js";
+        document.getElementById("header-container").innerHTML = header();
+
+        document.getElementById("wish-list-btn").addEventListener("click", () => {
+            window.open("wishlist.html");
+        });
+    </script>
+</head>
+<body>
+    <span id="header-container"></span>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-sidebar">
+            <div class="cart-header">
+                <h2>
+                    Shopping Cart
+                    <button class="cart-close" id="cartClose">&times;</button>
+                </h2>
+            </div>
+            <div class="cart-content" id="cartContent">
+            </div>
+            <div class="cart-footer" id="cartFooter">
+                <div class="cart-total">
+                    <span class="cart-total-label">Total:</span>
+                    <span class="cart-total-amount" id="cartTotalAmount">$0</span>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="main-img">
+            <div class="s1-container">
+                <div class="s1-text">
+                    <div class="hp">
+                        <h3>Wishlist</h3>
+                        <p>Review your picks, adjust with care, and when you're ready—let the magic begin.</p>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="s2">
+        <div class="all-fav"></div>
+    </section>
+
+    <footer>
+    <div class="footer-back">
+      <div class="div-mare">
+        <div class="f-left">
+          <h5>contact us</h5>
+          <hr>
+          <p>Email: hello@flutura-jewelry.com<br>
+            Phone: +1 (123) 456 7890<br>
+            Address: 123 Flutura, Sparkle City</p>
+          <div class="social-icons">
+            <img src="images/face.svg" alt="Facebook">
+            <img src="images/ig.svg" alt="Instagram">
+          </div>
+        </div>
+
+        <div class="f-center">
+          <img src="images/grey.png" alt="FLUTURA Logo" class="footer-logo">
+          <p>© 2025 FLUTURA. All rights reserved.<br>
+            Designed with grace & glitter.</p>
+        </div>
+
+        <div class="f-right">
+          <h5>navigator</h5>
+          <hr>
+          <nav class="small-menu">
+            <ul>
+              <li><a href="#">home</a></li>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">rings</a></li>
+              <li><a href="#">bracelets</a></li>
+              <li><a href="#">necklaces</a></li>
+              <li><a href="#">bridal</a></li>
+              <li><a href="#">contact us</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+            const navMenu = document.querySelector(".nav-menu");
+
+            if (mobileMenuToggle && navMenu) {
+                mobileMenuToggle.addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    navMenu.classList.toggle("active");
+                });
+
+                const navLinks = document.querySelectorAll(".nav-menu a");
+                navLinks.forEach((link) => {
+                    link.addEventListener("click", () => {
+                        mobileMenuToggle.classList.remove("active");
+                        navMenu.classList.remove("active");
+                    });
+                });
+
+                document.addEventListener("click", (event) => {
+                    if (!mobileMenuToggle.contains(event.target) && !navMenu.contains(event.target)) {
+                        mobileMenuToggle.classList.remove("active");
+                        navMenu.classList.remove("active");
+                    }
+                });
+            }
+
+            initializeCart();
+            loadWishlistItems();
+        });
+
+        let cart_arr = [];
+        let cnt_cart = 0;
+
+        function initializeCart() {
+            const savedCart = localStorage.getItem('flutura_cart');
+            if (savedCart) {
+                cart_arr = JSON.parse(savedCart);
+                cnt_cart = cart_arr.length;
+                updateCartBadge();
+            }
+
+            const cartOverlay = document.getElementById('cartOverlay');
+            const cartClose = document.getElementById('cartClose');
+            
+            document.addEventListener('click', (e) => {
+                if (e.target.closest('#cart-icon') || e.target.closest('.icon.desktop-only:last-child')) {
+                    openCart();
+                }
+            });
+
+            cartClose.addEventListener('click', closeCart);
+            cartOverlay.addEventListener('click', (e) => {
+                if (e.target === cartOverlay) {
+                    closeCart();
+                }
+            });
+        }
+
+        function openCart() {
+            const cartOverlay = document.getElementById('cartOverlay');
+            cartOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            renderCartItems();
+        }
+
+        function closeCart() {
+            const cartOverlay = document.getElementById('cartOverlay');
+            cartOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function addToCart(item) {
+            const existingItemIndex = cart_arr.findIndex(cartItem => cartItem.name === item.name);
+            
+            if (existingItemIndex > -1) {
+                cart_arr[existingItemIndex].quantity += 1;
+            } else {
+                cart_arr.push({
+                    ...item,
+                    quantity: 1
+                });
+            }
+            
+            cnt_cart = cart_arr.reduce((total, item) => total + item.quantity, 0);
+            updateCartBadge();
+            saveCartToStorage();
+        }
+
+        function removeFromCart(itemName) {
+            cart_arr = cart_arr.filter(item => item.name !== itemName);
+            cnt_cart = cart_arr.reduce((total, item) => total + item.quantity, 0);
+            updateCartBadge();
+            saveCartToStorage();
+            renderCartItems();
+        }
+
+        function updateQuantity(itemName, newQuantity) {
+            if (newQuantity <= 0) {
+                removeFromCart(itemName);
+                return;
+            }
+            
+            const itemIndex = cart_arr.findIndex(item => item.name === itemName);
+            if (itemIndex > -1) {
+                cart_arr[itemIndex].quantity = newQuantity;
+                cnt_cart = cart_arr.reduce((total, item) => total + item.quantity, 0);
+                updateCartBadge();
+                saveCartToStorage();
+                renderCartItems();
+            }
+        }
+
+        function updateCartBadge() {
+            const cartCountElem = document.getElementById("cart-count");
+            if (cartCountElem) {
+                cartCountElem.textContent = cnt_cart;
+                cartCountElem.style.display = cnt_cart > 0 ? "inline-block" : "none";
+            }
+        }
+
+        function saveCartToStorage() {
+            localStorage.setItem('flutura_cart', JSON.stringify(cart_arr));
+        }
+
+        function calculateTotal() {
+            return cart_arr.reduce((total, item) => {
+                return total + (parseFloat(item.price) * item.quantity);
+            }, 0);
+        }
+
+        function renderCartItems() {
+            const cartContent = document.getElementById('cartContent');
+            const cartTotalAmount = document.getElementById('cartTotalAmount');
+            
+            if (cart_arr.length === 0) {
+                cartContent.innerHTML = `
+                    <div class="cart-empty">
+                        <div class="cart-empty-icon">🛒</div>
+                        <h3>Your cart is empty</h3>
+                        <p>Add some beautiful jewelry to get started!</p>
+                    </div>
+                `;
+                cartTotalAmount.textContent = '$0';
+                return;
+            }
+
+            cartContent.innerHTML = cart_arr.map(item => `
+                <div class="cart-item">
+                    <div class="cart-item-image" style="background-image: url('${item.url}')"></div>
+                    <div class="cart-item-details">
+                        <h4 class="cart-item-name">${item.name}</h4>
+                        <p class="cart-item-price">$${item.price}</p>
+                        <div class="cart-item-actions">
+                            <div class="quantity-controls">
+                                <button class="quantity-btn" onclick="updateQuantity('${item.name}', ${item.quantity - 1})">−</button>
+                                <span class="quantity-display">${item.quantity}</span>
+                                <button class="quantity-btn" onclick="updateQuantity('${item.name}', ${item.quantity + 1})">+</button>
+                            </div>
+                            <button class="remove-item" onclick="removeFromCart('${item.name}')">Remove</button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            const total = calculateTotal();
+            cartTotalAmount.textContent = `$${total.toFixed(2)}`;
+        }
+
+        function loadWishlistItems() {
+            const savedWishlist = localStorage.getItem('flutura_wishlist');
+            const wishlistContainer = document.querySelector('.all-fav');
+            
+            if (!savedWishlist) {
+                wishlistContainer.innerHTML = '<p style="text-align: center; font-size: 24px; color: var(--text); margin: 50px 0;">Your wishlist is empty</p>';
+                return;
+            }
+
+            const wishlistData = JSON.parse(savedWishlist);
+            const wish_list_arr_bool = wishlistData.wish_list_arr_bool || [];
+            const rings_data = wishlistData.rings_data || [];
+            
+            wishlistContainer.innerHTML = '';
+            
+            wish_list_arr_bool.forEach((isFavorited, index) => {
+                if (isFavorited === 1 && rings_data[index]) {
+                    const item = rings_data[index];
+                    const wishlistItem = createWishlistItem(item, index);
+                    wishlistContainer.appendChild(wishlistItem);
+                }
+            });
+            
+            if (wishlistContainer.children.length === 0) {
+                wishlistContainer.innerHTML = '<p style="text-align: center; font-size: 24px; color: var(--text); margin: 50px 0;">Your wishlist is empty</p>';
+            }
+        }
+
+        function createWishlistItem(item, index) {
+            const div = document.createElement('div');
+            div.className = 'big';
+            div.innerHTML = `
+                <div class="left">
+                    <div class="remove" onclick="removeFromWishlist(${index})">
+                        <img src="images/x.png" alt="">Remove
+                    </div>
+                </div>
+                <div>
+                    <div class="fav-img" style="background-image: url('${item.url}')"></div>
+                    <div class="fav-details">
+                        <h4>${item.name}</h4>
+                        <p>$${item.price}</p>
+                        <button class="cart">
+                            <img src="images/cart_icon.png" alt="">ADD TO CART
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            div.getElementsByClassName("cart")[0].addEventListener("click", () => {
+                addToCart(item);
+                
+                const button = div.getElementsByClassName("cart")[0];
+                const originalText = button.innerHTML;
+                button.innerHTML = '<img src="images/cart_icon.png" alt="">ADDED!';
+                button.style.backgroundColor = '#4caf50';
+                button.style.borderColor = '#4caf50';
+                button.style.color = 'white';
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.style.backgroundColor = '';
+                    button.style.borderColor = '';
+                    button.style.color = '';
+                }, 1500);
+            });
+
+            return div;
+        }
+
+        function removeFromWishlist(index) {
+            const savedWishlist = localStorage.getItem('flutura_wishlist');
+            if (savedWishlist) {
+                const wishlistData = JSON.parse(savedWishlist);
+                wishlistData.wish_list_arr_bool[index] = 0;
+                wishlistData.cnt_wish = Math.max(0, wishlistData.cnt_wish - 1);
+                
+                localStorage.setItem('flutura_wishlist', JSON.stringify(wishlistData));
+                loadWishlistItems();
+                
+                console.log('Item removed from wishlist');
+            }
+        }
+
+        window.updateQuantity = updateQuantity;
+        window.removeFromCart = removeFromCart;
+        window.removeFromWishlist = removeFromWishlist;
+    </script>
+</body>
+</html>
